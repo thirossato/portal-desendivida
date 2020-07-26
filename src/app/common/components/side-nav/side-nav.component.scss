@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.side-nav {
+    display: flex;
+    font-family: "Open Sans";
+    flex-direction: column;
+    height: 100%;
+    max-width: 16%;
+    position: fixed;
+    background-color: $sec-2;
+    color: $sec-3;
+    .app-name {
+        box-shadow: 0px 3px 6px $shadow;
+        height: 10%;
+        .app-icon {
+            margin: 9%;
+            img {
+                padding: 0.2%;
+                width: 80%;
+                height: 50%;
+                margin-top: 7%;
+            }
+        }
+    }
+    li {
+        list-style: none;
+        margin: 10%;
+        ul {
+            cursor: pointer;
+            padding: 9% 5%;
+        }
+        .selected-item {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+#card-with-details {
+    background-color: $sec-3;
+    border-radius: 41px;
+    font-family: "Open Sans";
+    width: fit-content;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        font-weight: bold;
+        font-size: 1.3em;
+        padding-right: 15%;
+    }
+
+    .toggle-details {
+        text-align: center;
+        border-top: 1px solid $sec-4;
+        font-size: 0.6em;
+        width: 115%;
+        font-weight: bold;
+        span{
+            top:10px;
+            position: relative;
+            color: $brand-1;
+        }
+    }
+    .card-content{
+        font-size: 3em;
+        font-weight: bold;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 2% 0;
+        .elipsis {
+            border-radius: 50%;            
+            display: flex;
+            align-items: center;
+            padding: 3%;
+            img{
+                width: 48px;
+                height: 48px;
+            }
+            &-blue{
+                background-color: $sec-1;
+            }
+            &-lilac{
+                background-color: $brand-1;   
+            }
+            &-green{
+                background-color: $brand-good;   
+            }
+            &-red{
+                background-color: $brand-danger;   
+            }
+        }
+    }
+}
