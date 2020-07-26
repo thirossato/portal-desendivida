@@ -1,0 +1,20 @@
+<div id="card-with-progress" class="card w-100">
+    <div class="card-body">
+        <h5 class="card-title">{{tittle}}</h5>
+        <div class="row justify-content-between">
+            <span class="col-md-3"
+                [ngClass]="'label label-color-' +  progressBar.color">{{progressBar.maxVal | currency: 'BRL'}}</span>
+            <small class="col-md-6">Planejadas: {{progressBar.maxVal | currency: 'BRL'}}</small>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" [ngClass]="'bar-color-'+ progressBar.color" role="progressbar"
+                [attr.aria-valuenow]="progressBar.currentProgress" aria-valuemin="0"
+                [attr.aria-valuemax]="progressBar.maxVal" [ngStyle]="{'width': getWidth()}">
+            </div>
+        </div>
+        <small>{{(progressBar.maxVal - progressBar.currentProgress) | currency: 'BRL'}} para alcançar a meta</small>
+        <div class="toggle-details">
+            <span> ver mais</span>
+        </div>
+    </div>
+</div>

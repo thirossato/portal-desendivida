@@ -1,15 +1,17 @@
 <div id="card-with-details" class="card">
-    <div class="title">{{title}}</div>
-    <div class="card-content">
-        {{value | currency:'BRL' }}
-        <div class="elipsis" [ngClass]="'elipsis-'+ elipsisColor">
-            <img *ngIf="image === 'cartao'" src="../../../../assets/images/card.svg" alt="cartão">
-            <img *ngIf="image === 'banco'" src="../../../../assets/images/bank.svg" alt="banco">
-            <img *ngIf="image === 'setaCima'" src="../../../../assets/images/up-arrow.svg" alt="seta para cima">
-            <img *ngIf="image === 'setaBaixo'" src="../../../../assets/images/down-arrow.svg" alt="seta para baixo">
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <div class="row justify-content-around value-details">
+            <h1 class="col-md-10">{{value | currency:'BRL' }}</h1>
+            <div class="rounded-circle col-md-2" [ngClass]="elipsisColor">
+                <img *ngIf="image === 'cartao'" src="../../../../assets/images/card.svg" alt="cartão">
+                <img *ngIf="image === 'banco'" src="../../../../assets/images/bank.svg" alt="banco">
+                <img *ngIf="image === 'setaCima'" src="../../../../assets/images/up-arrow.svg" alt="seta para cima">
+                <img *ngIf="image === 'setaBaixo'" src="../../../../assets/images/down-arrow.svg" alt="seta para baixo">
+            </div>
+            <div class="toggle-details">
+                <span> ver mais</span>
+            </div>
         </div>
-    </div>
-    <div class="toggle-details">
-        <span> ver mais</span>
     </div>
 </div>

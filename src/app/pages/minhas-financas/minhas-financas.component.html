@@ -1,29 +1,41 @@
 <div id="my-financial-data" class="container-fluid">
     <h1>Minhas finanças</h1>
-    <div class="row justify-content-around mt-3">
-        <div class="col col-lg-3">
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-4">
             <app-card-with-details [title]="'Saldo contas bancárias'" [image]="'banco'" [value]="totalBalance"
                 [elipsisColor]="'blue'">
 
             </app-card-with-details>
         </div>
-        <div class="col col-lg-3">
+        <div class="col col-lg-4">
             <app-card-with-details [title]="'Cartão de crédito'" [image]="'cartao'" [value]="creditCardValue"
                 [elipsisColor]="'lilac'">
 
             </app-card-with-details>
         </div>
     </div>
-    <div class="row justify-content-around mt-3">
-        <div class="col col-lg-3">
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-4">
             <app-card-with-details [title]="'Receitas'" [image]="'setaCima'" [value]="receipt" [elipsisColor]="'green'">
 
             </app-card-with-details>
         </div>
-        <div class="col col-lg-3">
+        <div class="col col-lg-4">
             <app-card-with-details [title]="'Despesas'" [image]="'setaBaixo'" [value]="expenses" [elipsisColor]="'red'">
 
             </app-card-with-details>
+        </div>
+    </div>
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-5">
+            <app-card-with-progress [tittle]="'Planejamento das despesas do mes'"
+                [progressBar]="expensesPlaningProgressBar">
+            </app-card-with-progress>
+        </div>
+        <div class="col col-lg-5">
+            <app-card-with-progress [tittle]="'Planejamento das receitas do mes'"
+                [progressBar]="receiptPlaningProgressBar">
+            </app-card-with-progress>
         </div>
     </div>
 </div>

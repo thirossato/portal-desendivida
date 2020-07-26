@@ -1,8 +1,22 @@
 @import "../../styles/variables.scss";
 
-#card-with-details {
+@import "../../styles/variables.scss";
+
+#card-with-progress {
     background-color: $sec-3;
     border-radius: 41px;
+
+    .card-body {
+        .label {
+            font-weight: bold;
+            &-color-green {
+                color: $brand-good;
+            }
+            &-color-red {
+                color: $brand-danger;
+            }
+        }
+    }
 
     .toggle-details {
         text-align: center;
@@ -17,7 +31,7 @@
             color: $brand-1;
         }
     }
-    .value-details{
+    .value-details {
         align-items: baseline;
     }
     .rounded-circle {
@@ -32,16 +46,13 @@
             height: 48px;
         }
     }
-    .blue {
-        background-color: $sec-1;
+}
+
+.bar-color {
+    &-red {
+        background-color: $brand-danger !important;
     }
-    .lilac {
-        background-color: $brand-1;
-    }
-    .green {
-        background-color: $brand-good;
-    }
-    .red {
-        background-color: $brand-danger;
+    &-green {
+        background-color: $brand-good !important;
     }
 }

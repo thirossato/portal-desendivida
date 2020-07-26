@@ -8,6 +8,7 @@ import { SideNavComponent } from './common/components/side-nav/side-nav.componen
 import { HeaderComponent } from './common/components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardWithDetailsComponent } from './common/components/card-with-details/card-with-details.component';
+import { CardWithProgressComponent } from './common/components/card-with-progress/card-with-progress.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CardWithDetailsComponent } from './common/components/card-with-details/
     SideNavComponent,
     HeaderComponent,
     CardWithDetailsComponent,
+    CardWithProgressComponent,
   ],
   imports: [
     BrowserModule,

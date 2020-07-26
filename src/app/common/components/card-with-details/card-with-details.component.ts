@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardWithDetailsComponent{
   @Input() title: string;
-  @Input() image: string;
+  @Input() image: 'cartao' | 'banco' | 'setaCima' | 'setaBaixo';
   @Input() elipsisColor: string;
   @Input() value: number;
 
