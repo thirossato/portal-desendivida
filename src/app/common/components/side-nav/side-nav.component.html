@@ -1,42 +1,49 @@
 <div class="side-nav">
     <div class="app-name">
         <span class="app-icon">
-            <img src="../../../../assets/images/Camada_x0020_1.svg" alt="logo">
+            <!-- <img src="../../../../assets/images/Camada_x0020_1.svg" alt="logo"> -->
+            <span>Desindivida</span>
         </span>
-    </div>
+    </div>    
     <li>
-       <ul (click)="selectItem('financas')" [ngClass]="{'selected-item': selectedItem === 'financas'}">
-            <img *ngIf="selectedItem === 'financas'" src="../../../../assets/images/statistics-white.svg" alt="gráfico de finanças">
-            <img *ngIf="selectedItem !== 'financas'" src="../../../../assets/images/statistics.svg" alt="gráfico de finanças">
+        <ul routerLink="" [ngClass]="{'selected-item': selectedItem === '/minhas-financas'}">
+            <img *ngIf="selectedItem === '/minhas-financas'" src="../../../../assets/images/statistics-white.svg"
+                alt="gráfico de finanças">
+            <img *ngIf="selectedItem !== '/minhas-financas'" src="../../../../assets/images/statistics.svg"
+                alt="gráfico de finanças">
             Minhas finanças
         </ul>
 
-        <ul (click)="selectItem('renegociacoes')" [ngClass]="{'selected-item': selectedItem === 'renegociacoes'}">
-            <img *ngIf="selectedItem === 'renegociacoes'" src="../../../../assets/images/deal-white.svg" alt="mãos apertando">
-            <img *ngIf="selectedItem !== 'renegociacoes'" src="../../../../assets/images/deal.svg" alt="mãos apertando">
+        <ul routerLink="renegociacao" [ngClass]="{'selected-item': selectedItem === '/renegociacao'}">
+            <img *ngIf="selectedItem === '/renegociacao'" src="../../../../assets/images/deal-white.svg"
+                alt="mãos apertando">
+            <img *ngIf="selectedItem !== '/renegociacao'" src="../../../../assets/images/deal.svg" alt="mãos apertando">
             Renegociações
         </ul>
 
-        <ul (click)="selectItem('solucoes')" [ngClass]="{'class': selectedItem === 'solucoes'}">
-            <img *ngIf="selectedItem === 'solucoes'" src="../../../../assets/images/07-tip-white.svg" alt="dinheiro">
-            <img *ngIf="selectedItem !== 'solucoes'" src="../../../../assets/images/07-tip.svg" alt="dinheiro">
+        <ul routerLink="solucoes" [ngClass]="{'class': selectedItem === '/solucoes'}">
+            <img *ngIf="selectedItem === '/solucoes'" src="../../../../assets/images/07-tip-white.svg" alt="dinheiro">
+            <img *ngIf="selectedItem !== '/solucoes'" src="../../../../assets/images/07-tip.svg" alt="dinheiro">
             Soluções
         </ul>
 
-        <ul (click)="selectItem('analise')" [ngClass]="{'selected-item': selectedItem === 'analise'}">
-            <img *ngIf="selectedItem === 'analise'" src="../../../../assets/images/solution-white.svg" alt="lampada">
-            <img *ngIf="selectedItem !== 'analise'" src="../../../../assets/images/solution.svg" alt="lampada">
+        <ul routerLink="analise-de-credito" [ngClass]="{'selected-item': selectedItem === '/analise-de-credito'}">
+            <img *ngIf="selectedItem === '/analise-de-credito'" src="../../../../assets/images/solution-white.svg"
+                alt="lampada">
+            <img *ngIf="selectedItem !== '/analise-de-credito'" src="../../../../assets/images/solution.svg"
+                alt="lampada">
             Análise financeira
         </ul>
-        
-        <ul (click)="selectItem('perfil')" [ngClass]="{'selected-item': selectedItem === 'perfil'}">
-            <img *ngIf="selectedItem === 'perfil'" src="../../../../assets/images/profile-white.svg" alt="perfil">
-            <img *ngIf="selectedItem !== 'perfil'" src="../../../../assets/images/profile.svg" alt="perfil">
+
+        <ul routerLink="perfil" [ngClass]="{'selected-item': selectedItem === '/perfil'}">
+            <img *ngIf="selectedItem === '/perfil'" src="../../../../assets/images/profile-white.svg" alt="perfil">
+            <img *ngIf="selectedItem !== '/perfil'" src="../../../../assets/images/profile.svg" alt="perfil">
             Perfil
         </ul>
-        
-        <ul (click)="selectItem('configuracoes')" [ngClass]="{'selected-item': selectedItem === 'configuracoes'}">
-            <img *ngIf="selectedItem === 'configuracoes'" src="../../../../assets/images/settings-white.svg" alt="engrenagem">
+
+        <ul routerLink="settings" [ngClass]="{'selected-item': selectedItem === '/configuracoes'}">
+            <img *ngIf="selectedItem === '/configuracoes'" src="../../../../assets/images/settings-white.svg"
+                alt="engrenagem">
             <img src="../../../../assets/images/statistics.svg" alt="engrenagem">
             Configurações
         </ul>

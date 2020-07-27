@@ -1,0 +1,58 @@
+<div id="my-renegociation" class="container-fluid">
+    <h1 class="mt-2">Renegociação de dívida</h1>
+    <span class="mt-2 mb-3">Queremos saber algumas informações para te ajudar</span>
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="debtsForm" (ngSubmit)="onSubmit(debtsForm.value)">
+
+                        <div class="form-group">
+                            <label for="company" class="input-label">
+                                Empresa credora
+                            </label>
+                            <input class="form-control" id="company" type="text" formControlName="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="value" class="input-label">
+                                Valor da dívida
+                            </label>
+                            <input class="form-control" id="value" type="text" formControlName="value">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthlyPayment" class="input-label">
+                                Quanto você quer pagar por mês?
+                            </label>
+                            <input class="form-control" id="monthlyPayment" type="text"
+                                formControlName="monthlyPayment">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstPayment" class="input-label">
+                                Quanto você pode dar de entrada? <small>(se puder)</small>
+                            </label>
+                            <input class="form-control" id="firstPayment" type="text" formControlName="firstPayment">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstPaymentDate" class="input-label">
+                                Quando você pode começar a pagar?
+                            </label>
+                            <input class="form-control" id="firstPaymentDate" type="date"
+                                formControlName="firstPaymentDate">
+                        </div>
+
+                        <button class="button" type="submit">Simular negociação de dívida</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 back-image">
+            <img src="../../../assets/images/renegociacao.svg" alt="Renegociacao">
+        </div>
+
+    </div>
+</div>

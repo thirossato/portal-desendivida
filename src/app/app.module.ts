@@ -10,6 +10,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardWithDetailsComponent } from './common/components/card-with-details/card-with-details.component';
 import { CardWithProgressComponent } from './common/components/card-with-progress/card-with-progress.component';
 import { AnaliseFinanceiraComponent } from './pages/analise-financeira/analise-financeira.component';
+import { RenegociacaoComponent } from './pages/renegociacao/renegociacao.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,17 @@ import { AnaliseFinanceiraComponent } from './pages/analise-financeira/analise-f
     CardWithDetailsComponent,
     CardWithProgressComponent,
     AnaliseFinanceiraComponent,
+    RenegociacaoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

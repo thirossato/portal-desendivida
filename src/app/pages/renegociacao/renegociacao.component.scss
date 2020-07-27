@@ -1,0 +1,24 @@
+@import "../../common/styles/variables.scss";
+
+#my-renegociation {
+    margin-top: 10px;
+    .card {
+        border-radius: 41px;
+    }
+    .form-control {
+        border-radius: 41px;
+        border: 2px $brand-1 solid;
+    }
+    .button {
+        background-color: $brand-1;
+        color: $sec-3;
+        padding: 2%;
+        border-radius: 41px;
+        border: 0;
+    }
+    .back-image {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: baseline;
+    }
+}
