@@ -9,6 +9,7 @@ import { HeaderComponent } from './common/components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardWithDetailsComponent } from './common/components/card-with-details/card-with-details.component';
 import { CardWithProgressComponent } from './common/components/card-with-progress/card-with-progress.component';
+import { AnaliseFinanceiraComponent } from './pages/analise-financeira/analise-financeira.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CardWithProgressComponent } from './common/components/card-with-progres
     HeaderComponent,
     CardWithDetailsComponent,
     CardWithProgressComponent,
+    AnaliseFinanceiraComponent,
   ],
   imports: [
     BrowserModule,

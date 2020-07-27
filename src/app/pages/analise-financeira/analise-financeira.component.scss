@@ -1,0 +1,91 @@
+@import "../../common/styles/variables.scss";
+
+#my-financial-analisis {
+    .card {
+        margin-top: 10px;
+        background-color: $sec-3;
+        border-radius: 41px;
+        span {
+            font-weight: bold;
+        }
+        .status-description {
+            text-align: center;
+        }
+
+        h1 {
+            align-items: baseline;
+        }
+
+        .card-body {
+            .row {
+                min-height: 77px;
+            }
+        }
+
+        .toggle-details {
+            text-align: center;
+            border-top: 1px solid $sec-4;
+            font-size: 0.6em;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 8px;
+            span {
+                top: 10px;
+                position: relative;
+                color: $brand-1;
+            }
+        }
+        .rounded-circle {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 36px;
+            img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .icon {
+            max-height: 60px;
+        }
+
+        .blue {
+            background-color: $sec-1;
+        }
+        .lilac {
+            background-color: $brand-1;
+        }
+        .green {
+            background-color: $brand-good;
+        }
+        .red {
+            background-color: $brand-danger;
+        }
+    }
+    .tips {
+        background-color: $brand-1;
+        margin: 2%;
+        border-radius: 41px;
+        color: $sec-3;
+        h1 {
+            font-size: 2em;
+            margin-top: 2%;
+            color: $sec-3;
+            margin-bottom: 1%;
+        }
+        small{
+            color: $sec-3;
+            font-weight: bold;
+        }
+        img {
+            margin: 2%;
+            max-width: 100px;
+        }
+        fa-icon{
+           font-size: 3em;
+           margin-right: 1%;
+           margin-top: 3%;
+        }
+    }
+}

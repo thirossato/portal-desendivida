@@ -1,0 +1,151 @@
+<div id="my-financial-analisis" class="container-fluid">
+    <h1>Análise financeira</h1>
+    <h1>Minhas finanças</h1>
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="status-card-title">
+                        <span>status:</span>
+                        <h5 class="card-title">{{status.name}}</h5>
+                    </div>
+                    <div class="row justify-content-around">
+                        <small class="col-md-8 status-description">{{status.description }}</small>
+                        <div class="rounded-circle col-md-2" [ngClass]="status.color">
+                            <img class='icon' *ngIf="status.name !== 'Verde'"
+                                src='../../../assets/images/exclamation-icon.png' alt="exclamação" />
+                            <img class='icon' *ngIf="status.name === 'Verde'" src='../../../assets/images/check.png'
+                                alt="check" />
+                        </div>
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dividas inadimplentes</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{debtsFound}} encontradas</h1>
+                        <img class="col-md-3 icon   " src="../../../assets/images/debt.svg" alt="debito">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Outras pendencias</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{otherDebts}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/other-debts.png" alt="outros debitos">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Financiamentos</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{financing}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/financing.png" alt="financiamentos">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Emprestimos</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{loans}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/loan.svg" alt="emprestimo">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contas pagas atrasadas</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{laterPaidDebts}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/cash-payment.svg" alt="dinheiro">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content mt-3">
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contas corrente ou poupança</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{totalAccounts}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/accounts.svg" alt="porquinho">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cartões de crédito</h5>
+                    <div class="row justify-content-around">
+                        <h1 class="col-md-8 mt-4">{{creditCards}} encontradas</h1>
+                        <img class="col-md-3 icon" src="../../../assets/images/credit-cards.svg" alt="emprestimo">
+                        <div class="toggle-details">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico de cartões de crédito</h5>
+                    <div class="row justify-content-around">
+                        <small class="col-md-8 status-description mt-2">{{creditCardsHistory}}</small>
+                        <div class="toggle-details mt-4">
+                            <span> ver mais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row tips">
+        <img class="col-lg-2 " src="../../../assets/images/idea.svg" alt="ideia">
+        <div class="col-lg-9"col-lg-10>
+            <h1 class="col-md-12">Sugestões para melhoria de sua saúde financeira</h1>
+            <small class="col-md-12">Agora queremos te dar sugestões de como melhorar sua saúde financeira</small>
+        </div>
+        <fa-icon class="col-lg-1" [icon]="faAngleDown"></fa-icon>
+    </div>
+</div>
